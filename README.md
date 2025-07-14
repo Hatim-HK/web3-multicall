@@ -28,7 +28,7 @@ nestjs-multicall-project/
 1. **Clone** this repository:
    ```bash
    git clone <repo-url>
-   cd nestjs-multicall-project
+   cd web3-multicall
    ```
 
 2. **Install dependencies**:
@@ -68,7 +68,7 @@ nestjs-multicall-project/
     --data-urlencode "tokens=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48%2C0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
   ```bash
   curl -X 'GET' \
-  'http://localhost:3000/onchain/balances?wallet=0xYourWalletAddress&&tokens=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48%2C0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2' \
+  'http://localhost:3000/onchain/balances?wallet=0x3FfEFFE8C134Dff31c3569612bcA6298Ab17755C&&tokens=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48%2C0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2' \
   -H 'accept: */*'
   ```
   **Expected Response**:
@@ -78,6 +78,12 @@ nestjs-multicall-project/
     "0xC02aaA39b223FE8D0A0e5C4F27eaD9083C756Cc2": "<balance_of_WETH>"
   }
   ```
+
+## Run unit tests
+
+````quote
+yarn test
+````
 
 ## Notes
 - Make sure your RPC provider supports `eth_call` to the Multicall contract address.
